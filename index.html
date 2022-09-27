@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <div class="switch">
+            <div class="flicker"></div>
+            <div class="moon"></div>
+        </div>
+    </header>
+    <section class="main">
+      <div class="logo"><img src="./Logo/logo.svg" alt=""></div>
+      <div class="calculator">
+        <div class="left-side">
+          <div class="first-input"> 
+            <label for="total-bill">Total Bill</label>
+            <input type="number" placeholder="0" id="total-bill" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'>
+          </div>
+          <div class="tip-container">
+            <div class="tip-text">
+              <p>Select Tip %</p>
+            </div>
+            <div class="tips-btn">
+              <div class="button">5%</div>
+              <div class="button">10%</div>
+              <div class="button active-btn">15%</div>
+              <div class="button">20%</div>
+              <div class="button">25%</div>
+              <div class="tip-input"> 
+                <input type="number" placeholder="Custom" class="tip-custom" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+              </div>
+            </div>
+          </div>
+          <div class="second-input"> 
+            <label for="num-of-people">Number of people</label>
+            <label for="num-of-people" class="error">Can't be zero</label>
+            <input type="number" placeholder="0" id="num-of-people" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="tip-output">
+            <div class="text">
+              <p>Tip Amount</p>
+              <p class="person">/ person</p>
+            </div>
+            <div class="amount" id="tip-amount">13.56</div>
+          </div>
+          <div class="total-output">
+            <div class="text">
+              <p>Total</p>
+              <p class="person">/ person</p>
+            </div>
+            <div class="amount" id="total-amount">54.65</div>
+          </div>
+          <div class="reset-btn">Reset</div>
+        </div>
+      </div>
+
+    </section>
+    
+
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
